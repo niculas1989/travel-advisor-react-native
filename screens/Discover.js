@@ -8,6 +8,7 @@ import { Attractions } from "../assets";
 import { Restaurants } from "../assets";
 import MenuContainer from "../components/MenuContainer";
 import { FontAwesome } from '@expo/vector-icons';
+import ItemCardContainer from "../components/ItemCardContainer";
 
 function Discover() {
   const [type, setType] = useState('restaurants')
@@ -88,8 +89,17 @@ function Discover() {
             </TouchableOpacity>
           </View>
 
-          <View className='px-4 mt-8 flex-row items-center justify-evenly flex-wrap'>
-            
+          <View className='mt-8 flex-row items-center justify-evenly flex-wrap'>
+            <ItemCardContainer 
+            key={'101'} 
+              imageSrc={'https://picsum.photos/id/237/536/354'} 
+            title='Something' 
+            location='Doha' />
+            <ItemCardContainer 
+            key={'102'} 
+              imageSrc={'https://picsum.photos/seed/picsum/536/354'}
+            title='Sample' 
+            location='Quatar' />
           </View>
         </View>
       </ScrollView>
